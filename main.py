@@ -1,6 +1,8 @@
 import random
 
 def snake_water_gun(computer, player):
+    if computer == player:
+        return None
     if computer == 's' and player == 'g':
         return True
     elif computer == 'w' and player == 's':
@@ -19,5 +21,7 @@ win = snake_water_gun(computer, player)
 
 if win==True:
     print("The computer chose " + computer + " and you chose " + player + ". You win!")
+if win is None:
+    print("Draw!")
 else:
     print("The computer chose " + computer + " and you chose " + player + ". You lose!")
